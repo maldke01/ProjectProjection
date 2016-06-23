@@ -3,7 +3,7 @@ package draftkings;
 import java.util.ArrayList;
 import java.util.List;
 
-public class LineupsAssembler {
+public class LineupsAssembler2 {
 	
 	public static void assembleLineups(List<DKPlayer> quarterbacks,
 			List<DKPlayer> runningbacks, List<DKPlayer> widereceivers,

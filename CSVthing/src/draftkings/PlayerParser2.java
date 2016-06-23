@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PlayerParser {
+public class PlayerParser2 {
 	
 	//Delimiter used in CSV file
 	private static final String COMMA_DELIMITER = ",";

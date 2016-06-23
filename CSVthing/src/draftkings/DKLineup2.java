@@ -1,41 +1,56 @@
 package draftkings;
 
 
-public class DKLineup {
+public class DKLineup2 {
+	//10 players
+	//At least 2 different MLB games
+	//No more than 5 hitters in one team
+	//2 pitchers
+	//1 catcher
+	//1 FirstBase
+	//1 second base
+	//1 thirdbase
+	//1 shortstop
+	//3 outfielders
 	
-	private DKPlayer qb;
-	private DKPlayer rb1;
-	private DKPlayer rb2;
-	private DKPlayer wr1;
-	private DKPlayer wr2;
-	private DKPlayer wr3;
-	private DKPlayer flex;
-	private DKPlayer te;
-	private DKPlayer dst;
+	private DKPlayer2 outfielder1;
+	private DKPlayer2 outfielder2;
+	private DKPlayer2 outfielder3;
+	private DKPlayer2 shortstop;
+	private DKPlayer2 thirdBase;
+	private DKPlayer2 pitcher1;
+	private DKPlayer2 pitcher2;
+	private DKPlayer2 catcher;
+	private DKPlayer2 firstBase;
+	private DKPlayer2 secondBase;
+
 	private double cost;
 	private double teamPoints;
 	
-	public DKLineup(DKPlayer qb, DKPlayer rb1, DKPlayer rb2,
-			DKPlayer wr1, DKPlayer wr2, DKPlayer wr3, 
-			DKPlayer flex, DKPlayer te, DKPlayer dst) {
+	public DKLineup2(DKPlayer2 outfielder1, DKPlayer2 outfielder2, DKPlayer2 outfielder3, DKPlayer2 shortstop,
+			DKPlayer2 thirdBase, DKPlayer2 pitcher1, DKPlayer2 pitcher2, DKPlayer2 catcher, DKPlayer2 firstBase,
+			DKPlayer2 secondBase) {
 		super();
-		this.setQb(qb);
-		this.setRb1(rb1);
-		this.setRb2(rb2);
-		this.setWr1(wr1);
-		this.setWr2(wr2);
-		this.setWr3(wr3);
-		this.setFlex(flex);
-		this.setTe(te);
-		this.setDst(dst);
-		this.setTeamPoints(qb.getProjectedPoints() +
-				rb1.getProjectedPoints() + rb2.getProjectedPoints() +
-				wr1.getProjectedPoints() + wr2.getProjectedPoints() +
-				wr3.getProjectedPoints() + te.getProjectedPoints() +
-				flex.getProjectedPoints() + dst.getProjectedPoints());
+		this.outfielder1 = outfielder1;
+		this.outfielder2 = outfielder2;
+		this.outfielder3 = outfielder3;
+		this.shortstop = shortstop;
+		this.thirdBase = thirdBase;
+		this.pitcher1 = pitcher1;
+		this.pitcher2 = pitcher2;
+		this.catcher = catcher;
+		this.firstBase = firstBase;
+		this.secondBase = secondBase;
+		setTeamPoints();
+	}
+	
+	
+		this.setTeamPoints();
 		this.setCost(qb.getCost() + rb1.getCost() + rb2.getCost() +
 				wr1.getCost() + wr2.getCost() + wr3.getCost() +
 				te.getCost() + flex.getCost() + dst.getCost());
+
+
 	}
 	
 	public double getCost() {
@@ -134,6 +149,6 @@ public class DKLineup {
 	}
 
 	public void setTeamPoints(double teamPoints) {
-		this.teamPoints = teamPoints;
+		
 	}
 }

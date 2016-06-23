@@ -1,6 +1,6 @@
 package draftkings;
 
-public class LineupFinder {
+public class LineupFinder2 {
 	
 	public static void main(String[] args) {
 		
