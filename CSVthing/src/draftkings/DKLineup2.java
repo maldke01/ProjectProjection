@@ -42,15 +42,20 @@ public class DKLineup2 {
 		this.firstBase = firstBase;
 		this.secondBase = secondBase;
 		setTeamPoints();
+		setCost();
 	}
 	
 	
-		this.setTeamPoints();
-		this.setCost(qb.getCost() + rb1.getCost() + rb2.getCost() +
-				wr1.getCost() + wr2.getCost() + wr3.getCost() +
-				te.getCost() + flex.getCost() + dst.getCost());
-
-
+	public void setCost(){
+		this.setCost(outfielder1.getCost() + outfielder2.getCost() + outfielder3.getCost() +
+				shortstop.getCost() + firstBase.getCost() + secondBase.getCost() +
+				thirdBase.getCost() + catcher.getCost() + pitcher1.getCost() + pitcher2.getCost());
+	}
+	
+	public void setTeamPoints(){
+		this.setCost(outfielder1.getProjectedPoints() + outfielder2.getProjectedPoints() + outfielder3.getProjectedPoints() +
+				shortstop.getProjectedPoints() + firstBase.getProjectedPoints() + secondBase.getProjectedPoints() +
+				thirdBase.getProjectedPoints() + catcher.getProjectedPoints() + pitcher1.getProjectedPoints() + pitcher2.getProjectedPoints());
 	}
 	
 	public double getCost() {
@@ -70,78 +75,6 @@ public class DKLineup2 {
 				"flex=" + flex.getName() + "te=" + te.getName() +
 				"dst=" + dst.getName() + "teampoints=" + teamPoints +
 				"cost=" + cost + "]";
-	}
-
-	public DKPlayer getQb() {
-		return qb;
-	}
-
-	public void setQb(DKPlayer qb) {
-		this.qb = qb;
-	}
-
-	public DKPlayer getRb1() {
-		return rb1;
-	}
-
-	public void setRb1(DKPlayer rb1) {
-		this.rb1 = rb1;
-	}
-
-	public DKPlayer getRb2() {
-		return rb2;
-	}
-
-	public void setRb2(DKPlayer rb2) {
-		this.rb2 = rb2;
-	}
-
-	public DKPlayer getWr1() {
-		return wr1;
-	}
-
-	public void setWr1(DKPlayer wr1) {
-		this.wr1 = wr1;
-	}
-
-	public DKPlayer getWr2() {
-		return wr2;
-	}
-
-	public void setWr2(DKPlayer wr2) {
-		this.wr2 = wr2;
-	}
-
-	public DKPlayer getWr3() {
-		return wr3;
-	}
-
-	public void setWr3(DKPlayer wr3) {
-		this.wr3 = wr3;
-	}
-
-	public DKPlayer getFlex() {
-		return flex;
-	}
-
-	public void setFlex(DKPlayer flex) {
-		this.flex = flex;
-	}
-
-	public DKPlayer getTe() {
-		return te;
-	}
-
-	public void setTe(DKPlayer te) {
-		this.te = te;
-	}
-
-	public DKPlayer getDst() {
-		return dst;
-	}
-
-	public void setDst(DKPlayer dst) {
-		this.dst = dst;
 	}
 
 	public double getTeamPoints() {
